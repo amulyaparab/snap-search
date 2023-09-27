@@ -1,5 +1,5 @@
 import "./App.css";
-import BabylonScene from "./components/AnotherCanvas";
+import BabylonScene from "./components/BabylonScene";
 
 function App() {
   return (
