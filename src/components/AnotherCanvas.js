@@ -1,7 +1,7 @@
 import { Color3, Vector3 } from "@babylonjs/core/Maths/math";
 import React from "react";
 import { Engine, Scene, useClick } from "react-babylonjs";
-
+import "../App.css";
 function Cube() {
   const [ref] = useClick(() => {
     console.log("hi");
@@ -16,7 +16,7 @@ function Cube() {
       position={new Vector3(0, 0, 0)}
     >
       <standardMaterial
-        name="mat"
+        name="material"
         diffuseColor={Color3.FromHexString("#246768")}
       />
     </box>
@@ -25,8 +25,8 @@ function Cube() {
 
 const BabylonScene = () => (
   <div>
-    <Engine antialias adaptToDeviceRatio canvasId="babylon-js">
-      <Scene>
+    <Engine antialias adaptToDeviceRatio canvasId="react-canvas">
+      <Scene className="my-canvas">
         <arcRotateCamera
           name="camera"
           alpha={Math.PI / 2}
@@ -36,7 +36,7 @@ const BabylonScene = () => (
           setTarget={[Vector3.Zero()]}
         />
         <hemisphericLight
-          name="light1"
+          name="light"
           intensity={0.2}
           groundColor={new Color3(3, 3, 3)}
           diffuse={new Color3(10, 10, 10)}
