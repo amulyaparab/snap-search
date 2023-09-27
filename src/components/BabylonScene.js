@@ -9,8 +9,13 @@ const BabylonScene = () => {
   const { setShowSearchBar, showSearchBar } = useData();
 
   return (
-    <div style={{ width: "88%", margin: "auto" }}>
-      <Engine antialias adaptToDeviceRatio canvasId="react-canvas">
+    <div className="canvas-container">
+      <Engine
+        antialias
+        adaptToDeviceRatio
+        canvasId="react-canvas"
+        className="react-canvas"
+      >
         <Scene clearColor={new Color3(0.87, 0.9, 1).toColor4()}>
           <arcRotateCamera
             name="camera"

@@ -1,6 +1,10 @@
 import { createContext, useContext, useState } from "react";
 
-const DataContext = createContext();
+const DataContext = createContext({
+  showSearchBar: false,
+  searchText: "",
+  setSearchText: () => {},
+});
 
 export const DataContextProvider = ({ children }) => {
   const [showSearchBar, setShowSearchBar] = useState(false);

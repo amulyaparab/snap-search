@@ -7,7 +7,6 @@ import SearchBar from "./Search";
 const Cube = ({ setShowSearchBar, showSearchBar }) => {
   const [ref] = useClick(() => {
     setShowSearchBar(true);
-    console.log("hgkjsd");
   });
 
   return (

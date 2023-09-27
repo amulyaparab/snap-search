@@ -6,16 +6,6 @@ h1 {
   color: #adb9e2;
 }
 
-.search-parent {
-  position: fixed;
-  inset: 0;
-  width: 36%;
-  height: 90%;
-  margin: auto;
-  z-index: 5;
-  pointer-events: none;
-}
-
 .search-bar {
   padding: 0.7rem 1.2rem;
   border-radius: 5px;
@@ -25,15 +15,16 @@ h1 {
   font-weight: bold;
   top: 50%;
   left: 50%;
-  transform: translate(-10%, 85%);
+  transform: translate(-10%, 30%);
   opacity: 0.8;
   background-color: #212121;
-  color: rgb(255, 255, 255);
+  color: #adb9e2;
   pointer-events: all;
 }
 
 .search-bar::placeholder {
   color: rgba(255, 255, 255, 0.795);
+  color: #adb9e2;
 }
 
 .search-bar:focus {
@@ -42,7 +33,19 @@ h1 {
 
 .search-icon {
   position: relative;
-  top: 45px;
-  left: 215px;
+  top: 33px;
+  left: 220px;
   opacity: 0.8;
+  color: #adb9e2;
+  font-size: 18px;
+}
+
+.react-canvas:focus {
+  outline: none;
+}
+
+.canvas-container {
+  width: 88%;
+  margin: auto;
+  border-radius: 20px;
 }
