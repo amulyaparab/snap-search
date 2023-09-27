@@ -49,3 +49,29 @@ h1 {
   margin: auto;
   border-radius: 20px;
 }
+
+.drop-down {
+  opacity: 0.8;
+  position: absolute;
+  top: 4.2rem;
+  margin-left: -18px;
+}
+
+.drop-down li {
+  list-style: none;
+  padding: 0.7rem 1.5rem;
+  width: 224px;
+  text-align: left;
+  font-weight: bold;
+  color: #adb9e2;
+  border-left: 3px #adb9e2 solid;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.795);
+}
+
+.drop-down li:hover {
+  background-color: #adb9e2;
+  border-left: 3px #323d80 solid;
+  color: #212121;
+}

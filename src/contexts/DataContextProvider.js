@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from "react";
 
 const DataContext = createContext({
   showSearchBar: false,
-  searchText: "",
+  searchText: null,
   setSearchText: () => {},
 });
 

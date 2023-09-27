@@ -1,28 +1,26 @@
-import { useEffect, useState } from "react";
-import { useData } from "../contexts/DataContextProvider";
+import { useState } from "react";
+import { DropDown } from "./Dropdown";
+import data from "../database/data";
 
 const SearchBar = () => {
-  const [searchText, setSearchText] = useState("");
-  const dataArray = [
-    { id: 1, feature: "Lawn" },
-    { id: 2, feature: "Garden" },
-    { id: 3, feature: "Terrace" },
-    { id: 4, feature: "Balcony" },
-    { id: 5, feature: "Patio" },
-    { id: 6, feature: "Greenhouse" },
-    { id: 7, feature: "Courtyard" },
-    { id: 8, feature: "Porch" },
-    { id: 9, feature: "Poolhouse" },
-    { id: 10, feature: "Grill Area" },
-  ];
+  const [searchText, setSearchText] = useState(null);
+  const [showDropDown, setShowDropDown] = useState(true);
+  const findValueInData = data.filter(({ feature }) =>
+    feature.toLowerCase().includes(searchText?.toLowerCase())
+  );
+
+  console.log(findValueInData, searchText, "dsfkhjk");
   return (
     <div>
       <input
-        placeholder="Lawn"
+        placeholder="Search"
         className="search-bar"
         onChange={(event) => setSearchText(event.target.value)}
+        onBlur={() => setShowDropDown(false)}
+        onFocus={() => setShowDropDown(true)}
       />
       <i className="fa-solid fa-magnifying-glass search-icon"></i>
+      {showDropDown && <DropDown foundData={findValueInData} />}
     </div>
   );
 };
