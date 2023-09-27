@@ -6,7 +6,7 @@ const SearchBar = () => {
   const [searchText, setSearchText] = useState(null);
   const [showDropDown, setShowDropDown] = useState(true);
   const findValueInData = data.filter(({ feature }) =>
-    feature.toLowerCase().includes(searchText?.toLowerCase())
+    feature.toLowerCase().includes(searchText?.toLowerCase()?.trim())
   );
 
   console.log(findValueInData, searchText, "dsfkhjk");
@@ -15,6 +15,7 @@ const SearchBar = () => {
       <input
         placeholder="Search"
         className="search-bar"
+        value={searchText}
         onChange={(event) => setSearchText(event.target.value)}
         onBlur={() => setShowDropDown(false)}
         onFocus={() => setShowDropDown(true)}

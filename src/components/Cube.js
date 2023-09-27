@@ -20,9 +20,11 @@ const Cube = ({ setShowSearchBar, showSearchBar }) => {
       >
         <standardMaterial name="material">
           <texture assignTo="diffuseTexture" url={cube} />
+          <Html occlude={false} name="html">
+            {showSearchBar && <SearchBar />}
+          </Html>
         </standardMaterial>
       </box>
-      <Html name="html">{showSearchBar && <SearchBar />}</Html>
     </>
   );
 };

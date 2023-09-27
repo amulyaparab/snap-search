@@ -17,12 +17,17 @@ const BabylonScene = () => {
         className="react-canvas"
       >
         <Scene clearColor={new Color3(0.87, 0.9, 1).toColor4()}>
-          <arcRotateCamera
+          {/* <arcRotateCamera
             name="camera"
             alpha={Math.PI / 2}
             beta={Math.PI / 2.5}
             radius={10}
             position={new Vector3(0, 0, 0)}
+            setTarget={[Vector3.Zero()]}
+          />{" "} */}
+          <freeCamera
+            name="camera1"
+            position={new Vector3(0, 5, -10)}
             setTarget={[Vector3.Zero()]}
           />
           <hemisphericLight
