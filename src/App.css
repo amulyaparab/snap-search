@@ -11,20 +11,18 @@ h1 {
   border-radius: 5px;
   border: none;
   font-size: large;
-  /* position: relative; */
+  position: relative;
   font-weight: bold;
-  top: 100px;
-  right: 40px;
-  transform: translate(-10%);
+  top: -60px;
+  left: 40%;
+  transform: translate(-50%);
   opacity: 0.8;
   background-color: #212121;
   color: #adb9e2;
-  /* pointer-events: all; */
   z-index: -1;
 }
 
 .search-bar::placeholder {
-  color: rgba(255, 255, 255, 0.795);
   color: #adb9e2;
 }
 
@@ -34,8 +32,8 @@ h1 {
 
 .search-icon {
   position: relative;
-  top: -31px;
-  left: 220px;
+  top: -93px;
+  left: 87px;
   opacity: 0.8;
   color: #adb9e2;
   font-size: 18px;
@@ -53,9 +51,8 @@ h1 {
 
 .drop-down {
   opacity: 0.8;
-  /* position: absolute; */
-  top: 2px;
-  margin-left: -18px;
+  margin-left: -26px;
+  margin-top: -80px;
 }
 
 .drop-down li {

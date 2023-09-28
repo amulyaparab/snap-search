@@ -1,12 +1,10 @@
 import { Color3, Vector3 } from "@babylonjs/core/Maths/math";
-import React from "react";
 import { Engine, Scene } from "react-babylonjs";
-import "../App.css";
+import React, { useState } from "react";
 import Cube from "./Cube";
-import { useData } from "../contexts/DataContextProvider";
 
 const BabylonScene = () => {
-  const { setShowSearchBar, showSearchBar } = useData();
+  const [showSearchBar, setShowSearchBar] = useState(false);
 
   return (
     <div className="canvas-container">
@@ -17,17 +15,10 @@ const BabylonScene = () => {
         className="react-canvas"
       >
         <Scene clearColor={new Color3(0.87, 0.9, 1).toColor4()}>
-          {/* <arcRotateCamera
-            name="camera"
-            alpha={Math.PI / 2}
-            beta={Math.PI / 2.5}
-            radius={10}
-            position={new Vector3(0, 0, 0)}
-            setTarget={[Vector3.Zero()]}
-          />{" "} */}
           <freeCamera
-            name="camera1"
-            position={new Vector3(0, 5, -10)}
+            name="camera"
+            position={new Vector3(10, 10, -10)}
+            radius={1}
             setTarget={[Vector3.Zero()]}
           />
           <hemisphericLight

@@ -8,14 +8,14 @@ const Cube = ({ setShowSearchBar, showSearchBar }) => {
   const [ref] = useClick(() => {
     setShowSearchBar(true);
   });
-
+  console.log(showSearchBar);
   return (
     <>
       <box
         name="building-block"
         ref={ref}
         diameter={0}
-        size={4}
+        size={5}
         position={new Vector3(0, 0, 0)}
       >
         <standardMaterial name="material">

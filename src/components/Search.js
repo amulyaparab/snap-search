@@ -8,6 +8,8 @@ const SearchBar = () => {
   const findValueInData = data.filter(({ feature }) =>
     feature.toLowerCase().includes(searchText?.toLowerCase()?.trim())
   );
+  const searchValue = (text) => setSearchText(text);
+  const closeDropDown = () => setShowDropDown(false);
 
   console.log(findValueInData, searchText, "dsfkhjk");
   return (
@@ -17,11 +19,17 @@ const SearchBar = () => {
         className="search-bar"
         value={searchText}
         onChange={(event) => setSearchText(event.target.value)}
-        onBlur={() => setShowDropDown(false)}
-        onFocus={() => setShowDropDown(true)}
+        // onBlur={() => setShowDropDown(false)}
+        // onFocus={() => setShowDropDown(true)}
       />
       <i className="fa-solid fa-magnifying-glass search-icon"></i>
-      {showDropDown && <DropDown foundData={findValueInData} />}
+      {showDropDown && (
+        <DropDown
+          foundData={findValueInData}
+          searchValue={searchValue}
+          closeDropDown={closeDropDown}
+        />
+      )}
     </div>
   );
 };
