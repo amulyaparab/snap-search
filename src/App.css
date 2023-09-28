@@ -4,6 +4,7 @@
 
 .heading {
   color: #adb9e2;
+  padding: 1rem 0;
 }
 
 .search-bar {
@@ -20,6 +21,7 @@
   background-color: #212121;
   color: #adb9e2;
   z-index: -10;
+  width: 240px;
 }
 
 .search-bar::placeholder {
@@ -88,4 +90,93 @@
   color: #212121;
   opacity: 1;
   font-size: 23px;
+}
+
+@media screen and (max-width: 1600px) {
+  .search-bar {
+    padding: 0.7rem 1rem;
+    top: -60px;
+    left: 37%;
+    width: 215px;
+  }
+
+  .search-icon {
+    top: -93px;
+    left: 70px;
+  }
+
+  .close {
+    left: 207px;
+    top: -71px;
+  }
+
+  .drop-down {
+    margin-left: -33px;
+  }
+
+  .drop-down li,
+  .not-found {
+    width: 195px;
+  }
+
+  .search-bar::placeholder {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .search-bar {
+    padding: 0.7rem 1rem;
+    top: -40px;
+    left: 37%;
+    width: 180px;
+  }
+
+  .search-icon {
+    top: -73px;
+    left: 60px;
+    font-size: 18px;
+  }
+
+  .close {
+    left: 177px;
+    top: -51px;
+    font-size: 21px;
+  }
+
+  .drop-down {
+    margin-left: -28px;
+    margin-top: -60px;
+  }
+
+  .drop-down li,
+  .not-found {
+    width: 160px;
+    font-size: 15px;
+  }
+
+  .search-bar::placeholder {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 100px) {
+  .search-bar {
+    width: 160px;
+  }
+
+  .search-icon {
+    top: -73px;
+    left: 50px;
+  }
+
+  .close {
+    left: 160px;
+    top: -51px;
+  }
+
+  .drop-down li,
+  .not-found {
+    width: 142px;
+  }
 }
