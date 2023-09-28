@@ -1,14 +1,12 @@
 import { Vector3 } from "@babylonjs/core";
 import { Html, useClick } from "react-babylonjs";
 import cube from "../images/cube.jpg";
-import "../App.css";
 import SearchBar from "./Search";
 
 const Cube = ({ setShowSearchBar, showSearchBar }) => {
-  const [ref] = useClick(() => {
-    setShowSearchBar(true);
-  });
-  console.log(showSearchBar);
+  const [ref] = useClick(() => setShowSearchBar(true));
+  const closeSearch = () => setShowSearchBar(false);
+
   return (
     <>
       <box
@@ -21,7 +19,7 @@ const Cube = ({ setShowSearchBar, showSearchBar }) => {
         <standardMaterial name="material">
           <texture assignTo="diffuseTexture" url={cube} />
           <Html occlude={false} name="html">
-            {showSearchBar && <SearchBar />}
+            {showSearchBar && <SearchBar closeSearch={closeSearch} />}
           </Html>
         </standardMaterial>
       </box>

@@ -4,7 +4,7 @@ import BabylonScene from "./components/BabylonScene";
 function App() {
   return (
     <div className="App">
-      <h1>Snap Search</h1>
+      <h1 className="heading">Snap Search</h1>
       <BabylonScene />
     </div>
   );

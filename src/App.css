@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-h1 {
+.heading {
   color: #adb9e2;
 }
 
@@ -19,7 +19,7 @@ h1 {
   opacity: 0.8;
   background-color: #212121;
   color: #adb9e2;
-  z-index: -1;
+  z-index: -10;
 }
 
 .search-bar::placeholder {
@@ -36,7 +36,8 @@ h1 {
   left: 87px;
   opacity: 0.8;
   color: #adb9e2;
-  font-size: 18px;
+  font-size: 19px;
+  cursor: pointer;
 }
 
 .react-canvas:focus {
@@ -55,21 +56,36 @@ h1 {
   margin-top: -80px;
 }
 
-.drop-down li {
+.drop-down li,
+.not-found {
   list-style: none;
   padding: 0.7rem 1.5rem;
   width: 224px;
   text-align: left;
   font-weight: bold;
   color: #adb9e2;
-  border-left: 3px #adb9e2 solid;
+  border-left: 5px #6476f5 solid;
   cursor: pointer;
   border-radius: 2px;
   background-color: rgba(0, 0, 0, 0.795);
 }
 
-.drop-down li:hover {
+.drop-down li:hover,
+.not-found:hover {
   background-color: #adb9e2;
-  border-left: 3px #4152bd solid;
+  border-left: 5px #3140a3 solid;
   color: #212121;
+}
+
+.relative {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  left: 240px;
+  top: -73px;
+  color: #212121;
+  opacity: 1;
+  font-size: 23px;
 }

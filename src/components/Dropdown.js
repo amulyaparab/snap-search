@@ -1,23 +1,19 @@
-import { useEffect } from "react";
-
-export const DropDown = ({ foundData, searchValue, closeDropDown }) => {
-  console.log(searchValue);
-  useEffect(() => {}, []);
+const DropDown = ({ foundData, searchValue, clearSearch }) => {
   return (
     <div className="drop-down">
-      {foundData?.map(({ id, feature }) => {
-        return (
-          <li
-            key={id}
-            onClick={() => {
-              searchValue(feature);
-              closeDropDown();
-            }}
-          >
+      {foundData?.length && searchValue.length ? (
+        foundData?.map(({ id, feature }) => (
+          <li key={id} onClick={() => searchValue(feature)}>
             {feature}
           </li>
-        );
-      })}
+        ))
+      ) : (
+        <div className="not-found" onClick={clearSearch}>
+          Not Found. Go Back
+        </div>
+      )}
     </div>
   );
 };
+
+export default DropDown;
